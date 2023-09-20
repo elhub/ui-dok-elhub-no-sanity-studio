@@ -1,6 +1,7 @@
 import {defineConfig, isDev} from 'sanity'
 import {visionTool} from '@sanity/vision'
 import {deskTool} from 'sanity/desk'
+import {table} from '@sanity/table'
 import {schemaTypes} from './schemas'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
 
@@ -13,7 +14,7 @@ export default defineConfig({
   projectId: 'ovv3c751',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [deskTool(), visionTool(), table(), ...(isDev ? devOnlyPlugins : [])],
 
   schema: {
     types: schemaTypes,

@@ -14,5 +14,12 @@ export default {
       type: 'array',
       of: [{type: 'block'}],
     },
+    {
+      // Include the table as a field
+      // Giving it a semantic title
+      name: 'sizeChart',
+      title: 'Size Chart',
+      type: 'table',
+    },
   ],
 }
